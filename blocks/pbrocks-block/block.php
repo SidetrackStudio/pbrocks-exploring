@@ -49,15 +49,12 @@ function pbrocks_block_init() {
 add_action( 'init', 'pbrocks_block_init' );
 
 /**
- * Our combined block and shortcode renderer.
- *
- * We're not using sophisticated php, so if using the shortcode we'd need to specify all three values.
+ * Although this might render on the frontend, the block will be broken in the editor.
  *
  * @param array $attributes The attributes set on the block or shortcode.
  */
 function pbrocks_block_render( $attributes ) {
-	$return  = '<h2 style="color:salmon;">' . ( print_r( $attributes['value_one'], true ) ?: 'value_one not defined' ) . '</h2>';
-	$return .= '<h4>' . print_r( $attributes['value_two'], true ) . '</h4>';
-	$return .= '<p>' . print_r( $attributes['value_three'], true ) . '</p>';
-	return $return;
+	echo '<h2 style="color:salmon;">' . $attributes['value_one'] . '</h2>';
+	echo '<h4>' . $attributes['value_two'] . '</h4>';
+	echo '<p>' . $attributes['value_three'] . '</p>';
 }
