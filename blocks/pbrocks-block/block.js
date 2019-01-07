@@ -42,13 +42,11 @@ registerBlockType( 'pbrocks-exploring/pbrocks-block', {
 			 * do its thing, we use the onChange property to signal changes
 			 * to the editor, which calls for a re-render of the block.
 			 */
-           el( InspectorControls, {},
-				el( TextControl, {
-					label: 'Title Box',
-					value: props.attributes.value_one,
-					onChange: ( value ) => { props.setAttributes( { value_one: value } ); }
-				} ),
-            ),
+			el( TextControl, {
+				label: 'Title Box',
+				value: props.attributes.value_one,
+				onChange: ( value ) => { props.setAttributes( { value_one: value } ); }
+			} ),
           ]
 	},
 	// We're rendering in PHP, so return null in save().
