@@ -39,7 +39,8 @@ function pbrocks_block_init() {
 					'default' => 'This will be more of a description.... And I could go on and on...',
 				),
 			),
-			'editor_script'   => 'pbrocks-exploring', // The script name we gave in the wp_register_script() call.
+			// The script name we gave in the wp_register_script() call.
+			'editor_script'   => 'pbrocks-exploring',
 			'render_callback' => 'pbrocks_block_render',
 		)
 	);
