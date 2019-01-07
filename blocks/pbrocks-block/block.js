@@ -36,12 +36,7 @@ registerBlockType( 'pbrocks-exploring/pbrocks-block', {
 				block: 'pbrocks-exploring/pbrocks-block',
 				attributes: props.attributes,
 			} ),
-			/**
-			 * InspectorControls lets us add controls to the Block sidebar.
-			 * Recall that we defined attributes in PHP. To have the editor
-			 * do its thing, we use the onChange property to signal changes
-			 * to the editor, which calls for a re-render of the block.
-			 */
+
 			el( TextControl, {
 				label: 'Title Box',
 				value: props.attributes.value_one,
