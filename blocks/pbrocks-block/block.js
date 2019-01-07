@@ -36,42 +36,14 @@ registerBlockType( 'pbrocks-exploring/pbrocks-block', {
 				block: 'pbrocks-exploring/pbrocks-block',
 				attributes: props.attributes,
 			} ),
-<<<<<<< HEAD
 
 			el( TextControl, {
 				label: 'Title Box',
 				value: props.attributes.value_one,
 				onChange: ( value ) => { props.setAttributes( { value_one: value } ); }
 			} ),
-          ]
-=======
-			/**
-			 * InspectorControls lets us add controls to the Block sidebar.
-			 * Recall that we defined attributes in PHP. To have the editor
-			 * do its thing, we use the onChange property to signal changes
-			 * to the editor, which calls for a re-render of the block.
-			 */
-           el( InspectorControls, {},
-				el( TextControl, {
-					label: 'Title Text Box H2',
-					value: props.attributes.value_one,
-					onChange: ( value ) => { props.setAttributes( { value_one: value } ); }
-				} ),
-
-				el( TextControl, {
-					label: 'Byline Text Box H4',
-					value: props.attributes.value_two,
-					onChange: ( value ) => { props.setAttributes( { value_two: value } ); }
-				} ),
-
-				el( TextareaControl, {
-					label: 'Descriptive TextArea Paragraph',
-					value: props.attributes.value_three,
-					onChange: ( value ) => { props.setAttributes( { value_three: value } ); },
-				} ),
-            ),
 		]
->>>>>>> master
+
 	},
 	// We're rendering in PHP, so return null in save().
 	save: function() {
