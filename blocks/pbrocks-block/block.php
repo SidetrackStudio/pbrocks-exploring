@@ -21,6 +21,12 @@ defined( 'ABSPATH' ) || die( 'File cannot be accessed directly' );
  * Note that we use the same function signature in PHP and JS when doing server-side rendering.
  */
 function pbrocks_block_init() {
+	// Register our block editor script.
+	wp_enqueue_script(
+		'pbrocks-block',
+		plugins_url( 'block.js', __FILE__ ),
+		array( 'wp-blocks', 'wp-element', 'wp-components', 'wp-editor' )
+	);
 	register_block_type(
 		'pbrocks-exploring/pbrocks-block',
 		array(
