@@ -1,8 +1,8 @@
 <?php
 /**
- * Enqueues blocks in editor and dynamic blocks
+ * Initializes block in editor and frontend
  *
- * @package blocks
+ * @package pbrocks-exploring
  */
 
 defined( 'ABSPATH' ) || die( 'File cannot be accessed directly' );
