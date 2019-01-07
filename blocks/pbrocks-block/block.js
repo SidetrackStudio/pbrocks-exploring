@@ -18,7 +18,7 @@ registerBlockType( 'pbrocks-exploring/pbrocks-block', {
 	icon: {
 		background: '#29c8aa',
 		foreground: '#ffffff',
-		src: 'megaphone',
+		src: 'sos',
 	},
 	category: 'common',
 
