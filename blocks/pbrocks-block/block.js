@@ -14,7 +14,7 @@ const el = wp.element.createElement,
  * need to do so in JavaScript for the editor to work properly.
  */
 registerBlockType( 'pbrocks-exploring/pbrocks-block', {
-	title: 'PBrocks Block',
+	title: __( 'PBrocks Block', 'pbrocks-exploring' ),
 	icon: {
 		background: '#29c8aa',
 		foreground: '#ffffff',
