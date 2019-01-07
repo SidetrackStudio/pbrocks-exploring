@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) || die( 'File cannot be accessed directly' );
 function pbrocks_block_init() {
 	// Register our block editor script.
 	wp_enqueue_script(
-		'php-block',
+		'pbrocks-block',
 		plugins_url( 'block.js', __FILE__ ),
 		array( 'wp-blocks', 'wp-element', 'wp-components', 'wp-editor' )
 	);
