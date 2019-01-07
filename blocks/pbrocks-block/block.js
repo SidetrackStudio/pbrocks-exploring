@@ -18,7 +18,7 @@ registerBlockType( 'pbrocks-exploring/pbrocks-block', {
 	icon: {
 		background: '#29c8aa',
 		foreground: '#ffffff',
-		src: 'megaphone',
+		src: 'sos',
 	},
 	category: 'common',
 
@@ -44,24 +44,24 @@ registerBlockType( 'pbrocks-exploring/pbrocks-block', {
 			 */
            el( InspectorControls, {},
 				el( TextControl, {
-					label: 'Title Box',
+					label: 'Title Text Box H2',
 					value: props.attributes.value_one,
 					onChange: ( value ) => { props.setAttributes( { value_one: value } ); }
 				} ),
 
 				el( TextControl, {
-					label: 'Byline Text Box',
+					label: 'Byline Text Box H4',
 					value: props.attributes.value_two,
 					onChange: ( value ) => { props.setAttributes( { value_two: value } ); }
 				} ),
 
 				el( TextareaControl, {
-					label: 'Descriptive Paragraph',
+					label: 'Descriptive TextArea Paragraph',
 					value: props.attributes.value_three,
 					onChange: ( value ) => { props.setAttributes( { value_three: value } ); },
 				} ),
             ),
-          ]
+		]
 	},
 	// We're rendering in PHP, so return null in save().
 	save: function() {
