@@ -26,20 +26,12 @@ function pbrocks_block_init() {
 		array(
 			'attributes'      =>
 			array(
-				'value_one'   => array(
+				'value_one' => array(
 					'type'    => 'string',
 					'default' => 'A simple text box',
 				),
-				'value_two'   => array(
-					'type'    => 'string',
-					'default' => 'Ain\'t this purdy?',
-				),
-				'value_three' => array(
-					'type'    => 'string',
-					'default' => 'This will be more of a description.... And I could go on and on...',
-				),
 			),
-			'editor_script'   => 'pbrocks-exploring', // The script name we gave in the wp_register_script() call.
+			'editor_script'   => 'pbrocks-exploring',
 			'render_callback' => 'pbrocks_block_render',
 		)
 	);
@@ -56,8 +48,6 @@ add_action( 'init', 'pbrocks_block_init' );
  * @param array $attributes The attributes set on the block or shortcode.
  */
 function pbrocks_block_render( $attributes ) {
-	$return  = '<h2 style="color:salmon;">' . ( print_r( $attributes['value_one'], true ) ?: 'value_one not defined' ) . '</h2>';
-	$return .= '<h4>' . print_r( $attributes['value_two'], true ) . '</h4>';
-	$return .= '<p>' . print_r( $attributes['value_three'], true ) . '</p>';
+	$return = '<h2>' . print_r( $attributes, true ) . '</h2>';
 	return $return;
 }

@@ -48,18 +48,6 @@ registerBlockType( 'pbrocks-exploring/pbrocks-block', {
 					value: props.attributes.value_one,
 					onChange: ( value ) => { props.setAttributes( { value_one: value } ); }
 				} ),
-
-				el( TextControl, {
-					label: 'Byline Text Box',
-					value: props.attributes.value_two,
-					onChange: ( value ) => { props.setAttributes( { value_two: value } ); }
-				} ),
-
-				el( TextareaControl, {
-					label: 'Descriptive Paragraph',
-					value: props.attributes.value_three,
-					onChange: ( value ) => { props.setAttributes( { value_three: value } ); },
-				} ),
             ),
           ]
 	},
