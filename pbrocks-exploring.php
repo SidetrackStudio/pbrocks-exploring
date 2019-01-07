@@ -14,7 +14,8 @@
 
 defined( 'ABSPATH' ) || die( 'Nothing to see here, folks!' );
 
-require 'blocks/blocks.php';
+require 'blocks/pbrocks-block/block.php';
+
 /**
  * [load_exploring_blocks_api_textdomain] Tie in to GlotPress to handle translations.
  *
